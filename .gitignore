@@ -13,3 +13,7 @@ dist/
 
 # Logs
 *.log
+
+# Never publish profile archives
+*.mhtml
+*_LinkedIn*
