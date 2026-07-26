@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://delightful-dune-017a6d40f.7.azurestaticapps.net/sitemap.xml
