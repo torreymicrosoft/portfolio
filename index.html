@@ -82,6 +82,7 @@
       <div class="hero__aurora" aria-hidden="true"></div>
       <div class="hero__grid" aria-hidden="true"></div>
       <div class="container hero__inner">
+        <div class="hero__main">
         <span class="pill"><span class="pill__dot"></span> PM @ Microsoft Azure <span class="sep">·</span> Bicep &amp; Deployments</span>
         <div class="hero__id">
           <span class="avatar" aria-hidden="true">TT</span>
@@ -111,7 +112,22 @@
           <li><strong data-count="15" data-suffix="+">0</strong><span>Hardware programs shipped</span></li>
           <li><strong data-count="25" data-suffix="+">0</strong><span>Countries reached (Percept)</span></li>
         </ul>
+        </div>
+        <aside class="hero__visual" aria-hidden="true">
+          <div class="codecard">
+            <div class="codecard__bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="codecard__title">main.bicep</span></div>
+            <pre><span class="c">// authored with Copilot agent mode</span>
+<span class="k">targetScope</span> = <span class="s">'subscription'</span>
+
+<span class="k">resource</span> site <span class="s">'Microsoft.Web/staticSites@2024-04-01'</span> = {
+  name: <span class="s">'torrey-portfolio'</span>
+  location: <span class="p">location</span>
+  sku: { name: <span class="s">'Free'</span> }
+}</pre>
+          </div>
+        </aside>
       </div>
+      <a class="hero__scroll" href="#about" aria-label="Scroll to content"><span></span></a>
     </section>
 
     <!-- ===================== MARQUEE ===================== -->
@@ -218,7 +234,7 @@
         <p class="kicker">Contact</p>
         <h2 class="section__title">Let's build something developers love.</h2>
         <p class="muted contact__lede">
-          Open to Developer Evangelism &amp; Product Management roles at the intersection of hardware, cloud, and AI.
+          Always glad to connect with developers and builders about Azure, Bicep, and AI-assisted infrastructure.
         </p>
         <div class="contact__links" id="contact-links"></div>
       </div>

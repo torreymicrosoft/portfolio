@@ -8,5 +8,5 @@
   </defs>
   <rect width="64" height="64" rx="14" fill="url(#g)"/>
   <text x="50%" y="53%" dominant-baseline="middle" text-anchor="middle"
-        font-family="Segoe UI, Arial, sans-serif" font-weight="800" font-size="34" fill="#08101f">T</text>
+        font-family="Segoe UI, Arial, sans-serif" font-weight="800" font-size="25" letter-spacing="-1" fill="#08101f">TT</text>
 </svg>
