@@ -1,7 +1,7 @@
 /* ============================================================
-   Torrey Trahanovsky — Portfolio  ·  main.js
-   Content is data-driven. Edit the arrays below, then push —
-   the site auto-deploys to Azure. No build step.
+   Torrey Trahanovsky, Portfolio  ·  main.js
+   Content is data-driven. Edit the arrays below, then push,
+   and the site auto-deploys to Azure. No build step.
    ============================================================ */
 
 /* ---------- EDIT ME: PROJECTS ---------- */
@@ -11,7 +11,7 @@ const PROJECTS = [
     title: "AI Career Advisor",
     year: "2025",
     category: "AI & ML",
-    desc: "My UC Berkeley MIDS final capstone (Spring 2025) — a generative-AI \"AI Career Advisor,\" the culminating project across my applied-ML, NLP, and data-engineering coursework.",
+    desc: "My UC Berkeley MIDS final capstone (Spring 2025): a generative-AI \"AI Career Advisor,\" the culminating project across my applied-ML, NLP, and data-engineering coursework.",
     tags: ["Gen-AI", "NLP", "Python", "Capstone"],
     links: [],
   },
@@ -20,43 +20,43 @@ const PROJECTS = [
     title: "AVM + Copilot (Agent Mode)",
     year: "2026",
     category: "AI & ML",
-    desc: "AI-assisted infrastructure-as-code — authoring secure, well-architected Azure Verified Modules with a live GitHub Copilot agent-mode workflow. Presented at Azure Infra Summit 2026.",
+    desc: "AI-assisted infrastructure-as-code: authoring secure, well-architected Azure Verified Modules with a live GitHub Copilot agent-mode workflow. Presented at Azure Infra Summit 2026.",
     tags: ["LLM", "Copilot", "Bicep", "AVM"],
-    links: [{ label: "Azure Verified Modules", href: "https://azure.github.io/Azure-Verified-Modules/" }],
+    links: [],
   },
   {
     icon: "🧬",
-    title: "GAN Research — Microsoft Boston",
-    year: "2019–20",
+    title: "GAN Research at Microsoft Boston",
+    year: "2019 to 2020",
     category: "AI & ML",
-    desc: "A 10-week applied-ML project with Microsoft Boston PhD researchers building and studying Generative Adversarial Networks (GANs).",
+    desc: "A 10-week applied-ML project with Microsoft Boston PhD researchers, building and studying Generative Adversarial Networks (GANs) during my time as a Microsoft Student Partner.",
     tags: ["GANs", "Deep Learning", "Research"],
     links: [],
   },
   {
     icon: "🧠",
-    title: "Azure Percept DK — Edge AI DevKit",
+    title: "Azure Percept DK, Edge AI DevKit",
     year: "2021",
     category: "Edge & Hardware",
-    desc: "Deployable Edge-AI developer kit with vision and audio, paired with Azure Percept Studio. Drove it from concept (P0) to GA — announced at Microsoft Ignite.",
+    desc: "Deployable Edge-AI developer kit with vision and audio, paired with Azure Percept Studio. Drove it from concept (P0) to GA, announced at Microsoft Ignite.",
     tags: ["Edge AI", "Computer Vision", "Azure IoT", "Hardware"],
     links: [],
   },
   {
     icon: "🛡️",
-    title: "Azure Light Edge — Secure Edge OS",
-    year: "2020–24",
+    title: "Azure Light Edge, Secure Edge OS",
+    year: "2020 to 2024",
     category: "Edge & Hardware",
-    desc: "Operating systems, device imaging, Kubernetes, and Secure Core security certifications for Linux/Windows on constrained edge hardware.",
+    desc: "Operating systems, device imaging, Kubernetes, and Secure Core security certifications for Linux and Windows on constrained edge hardware.",
     tags: ["Kubernetes", "Linux", "Secure Core", "Edge"],
     links: [],
   },
   {
     icon: "🛠️",
     title: "IoT Config Tool V2",
-    year: "2020–24",
+    year: "2020 to 2024",
     category: "Edge & Hardware",
-    desc: "Second-generation configuration and provisioning experience for edge devices — owned PRDs, GTM, telemetry, and partner/ecosystem research end to end.",
+    desc: "Second-generation configuration and provisioning experience for edge devices. Owned PRDs, GTM, telemetry, and partner and ecosystem research end to end.",
     tags: ["Edge", "Provisioning", "Telemetry"],
     links: [],
   },
@@ -65,16 +65,16 @@ const PROJECTS = [
     title: "Deployment Stacks & IaC CI/CD",
     year: "2026",
     category: "Cloud & DevOps",
-    desc: "Product work on Azure deployment stacks, what-if / snapshots, IaC CI/CD, and the Azure Landing Zone (ALZ) accelerator — the backbone of modern Azure delivery.",
+    desc: "Product work on Azure deployment stacks, what-if and snapshots, IaC CI/CD, and the Azure Landing Zone (ALZ) accelerator: the backbone of modern Azure delivery.",
     tags: ["Bicep", "Deployment Stacks", "ALZ", "DevOps"],
-    links: [{ label: "Learn", href: "https://learn.microsoft.com/azure/azure-resource-manager/bicep/deployment-stacks" }],
+    links: [],
   },
   {
     icon: "☁️",
-    title: "Azure Arc — Adaptive Cloud",
-    year: "2020–24",
+    title: "Azure Arc, Adaptive Cloud",
+    year: "2020 to 2024",
     category: "Cloud & DevOps",
-    desc: "Edge-focused security and CI/CD experiences across Adaptive Cloud (Arc) — full lifecycle from PRD through funding, POC, and MVP for 50+ enterprise customers.",
+    desc: "Edge-focused security and CI/CD experiences across Adaptive Cloud (Arc). Full lifecycle from PRD through funding, POC, and MVP for 50+ enterprise customers.",
     tags: ["Azure Arc", "CI/CD", "Security", "Hybrid"],
     links: [],
   },
@@ -83,52 +83,52 @@ const PROJECTS = [
 /* ---------- EDIT ME: EXPERIENCE & EDUCATION ---------- */
 const EXPERIENCE = [
   {
-    role: "Product Manager 2 — Bicep & Deployments",
+    role: "Product Manager 2, Bicep & Deployments",
     org: "Microsoft · Azure Core",
-    date: "Mar 2026 – Present",
+    date: "Mar 2026 to Present",
     dur: "5 mos",
-    desc: "Drive Bicep and Azure deployment experiences: deployment stacks, AVM + Copilot, IaC CI/CD, and the ALZ accelerator. Evangelize IaC at Azure Infra Summit 2026 and the PowerShell + DevOps Global Summit — including a live Copilot agent-mode demo to a 3,500+ developer audience.",
+    desc: "Drive Bicep and Azure deployment experiences: deployment stacks, AVM + Copilot, IaC CI/CD, and the ALZ accelerator. Evangelize IaC at Azure Infra Summit 2026 and the PowerShell + DevOps Global Summit, including a live Copilot agent-mode demo to a 3,500+ developer audience.",
   },
   {
-    role: "Technical Program Manager 2 — Xbox",
+    role: "Technical Program Manager 2, Xbox",
     org: "Microsoft · Xbox",
-    date: "Aug 2024 – Apr 2026",
+    date: "Aug 2024 to Apr 2026",
     dur: "1 yr 9 mos",
     desc: "Xbox Accessories: shipped 15+ customization programs on time and on budget with cost reductions, driving manufacturing, milestone, and reliability improvements across 10+ cross-functional teams.",
   },
   {
-    role: "Product Manager 2 & TPM 2 — Azure (Arc · Edge)",
+    role: "Product Manager 2 & TPM 2, Azure (Arc and Edge)",
     org: "Microsoft · Azure",
-    date: "Jul 2020 – Aug 2024",
+    date: "Jul 2020 to Aug 2024",
     dur: "4 yrs 2 mos",
-    desc: "Full-lifecycle software, firmware, and hardware program management across Azure Edge Devices (Azure Percept), Azure Light Edge (OS, imaging, Kubernetes, Secure Core), and Adaptive Cloud / Arc (edge security & CI/CD). Launched Percept DK from concept to GA.",
+    desc: "Full-lifecycle software, firmware, and hardware program management across Azure Edge Devices (Azure Percept), Azure Light Edge (OS, imaging, Kubernetes, Secure Core), and Adaptive Cloud and Arc (edge security and CI/CD). Launched Percept DK from concept to GA.",
   },
   {
     role: "Microsoft Student Partner",
     org: "Microsoft",
-    date: "Oct 2018 – Mar 2020",
+    date: "Oct 2018 to Mar 2020",
     dur: "1 yr 6 mos",
-    desc: "Hosted 7+ workshops (50+ attendees each) at CMU, Pitt & Chatham, and ran a 10-week GAN research project with Microsoft Boston PhD researchers.",
+    desc: "Hosted 7+ workshops (50+ attendees each) at CMU, Pitt, and Chatham, and ran a 10-week GAN research project with Microsoft Boston PhD researchers.",
   },
   {
     role: "PM & Innovation Internships",
     org: "Citi (HK) · Google · Ingram Micro",
-    date: "2018 – 2019",
+    date: "2018 to 2019",
     dur: "",
-    desc: "Citi Hong Kong TTS summer analyst (sole non-MBA extended a return offer); Google Student Innovator for GCP & G-Suite; Ingram Micro innovation intern — launched a reverse-mentoring program for 20+ senior IT leaders.",
+    desc: "Citi Hong Kong TTS summer analyst (sole non-MBA extended a return offer); Google Student Innovator for GCP and G-Suite; Ingram Micro innovation intern who launched a reverse-mentoring program for 20+ senior IT leaders.",
   },
   {
     role: "M.S., Information & Data Science (MIDS)",
     org: "UC Berkeley",
-    date: "Aug 2021 – Apr 2025",
+    date: "Aug 2021 to Apr 2025",
     dur: "",
     edu: true,
-    desc: "Graduate study in applied AI/ML — Applied Machine Learning, ML at Scale, NLP, Gen-AI, and Data Engineering. Capstone: AI Career Advisor.",
+    desc: "Graduate study in applied AI and ML: Applied Machine Learning, ML at Scale, NLP, Gen-AI, and Data Engineering. Capstone: AI Career Advisor.",
   },
   {
     role: "B.S.B.A., Supply Chain Management",
     org: "University of Pittsburgh",
-    date: "Aug 2017 – Apr 2020",
+    date: "Aug 2017 to Apr 2020",
     dur: "Dean's List",
     edu: true,
     desc: "Graduated a year early with partial studies in computer and information science; founded the Google Developer Student Club at Pitt.",
@@ -140,29 +140,29 @@ const SPEAKING = [
   {
     ico: "🎤",
     title: "PowerShell + DevOps Global Summit 2026",
-    desc: "The Bicep team ran four on-demand sessions — the local-deploy Bicep extension, learning Bicep with AI, deployment stacks, and the state of IaC on Azure.",
-    cta: { label: "About the summit", href: "https://powershelldevopsglobalsummit.org/" },
+    desc: "The Bicep team ran four on-demand sessions: the local-deploy Bicep extension, learning Bicep with AI, deployment stacks, and the state of IaC on Azure.",
+    cta: { label: "See on LinkedIn", href: "https://www.linkedin.com/in/torrey-tnt" },
   },
   {
     ico: "🗣️",
     title: "Azure Infra Summit 2026",
-    desc: "Five on-demand Bicep sessions — power-user patterns, deployment stacks, AVM + Copilot, IaC CI/CD, the ALZ accelerator, and a live Copilot agent-mode demo.",
+    desc: "Five on-demand Bicep sessions: power-user patterns, deployment stacks, AVM + Copilot, IaC CI/CD, the ALZ accelerator, and a live Copilot agent-mode demo.",
     cta: { label: "Bicep: Beyond the Basics", href: "https://www.youtube.com/watch?v=y7G7aXwe6QY" },
   },
   {
     ico: "📺",
     title: "Bicep Community & Content",
-    desc: "Ongoing monthly Bicep updates, demos, and developer evangelism — teaching infrastructure-as-code, governance, and AI-assisted workflows.",
-    cta: { label: "Explore Bicep", href: "https://github.com/Azure/bicep" },
+    desc: "Ongoing Bicep updates, demos, and developer evangelism, teaching infrastructure-as-code, governance, and AI-assisted workflows.",
+    cta: { label: "Azure Bicep on GitHub", href: "https://github.com/Azure/bicep" },
   },
 ];
 
 /* ---------- EDIT ME: CONTACT ---------- */
 const CONTACT = [
   { label: "Email", href: "mailto:torrey@berkeley.edu", ico: "✉️" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/torrey-tnt", ico: "in" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/torrey-tnt", ico: "in" },
   { label: "GitHub", href: "https://github.com/torreymicrosoft", ico: "GH" },
-  { label: "Résumé", href: "assets/resume.pdf", ico: "📄" },
+  { label: "Resume", href: "assets/resume.pdf", ico: "📄" },
 ];
 
 /* ---------- Marquee items ---------- */
@@ -230,10 +230,10 @@ const MARQUEE = [
   const tl = $("#timeline");
   EXPERIENCE.forEach((e) => {
     const li = el("li", "reveal" + (e.edu ? " edu" : ""));
-    const dur = e.dur ? ` · <b>${e.dur}</b>` : "";
+    const dur = e.dur ? ` <span class="sep">·</span> <b>${e.dur}</b>` : "";
     li.innerHTML = `
       <div class="t-role">${e.role}</div>
-      <span class="t-date"><span class="t-org">${e.org}</span> — ${e.date}${dur}</span>
+      <span class="t-date"><span class="t-org">${e.org}</span>, ${e.date}${dur}</span>
       <p class="t-desc">${e.desc}</p>`;
     tl.appendChild(li);
   });
@@ -261,8 +261,7 @@ const MARQUEE = [
 
   /* ----- Marquee (duplicated for seamless loop) ----- */
   const mq = $("#marquee");
-  const items = [...MARQUEE, ...MARQUEE].map((t) => `<span>${t}</span>`).join("");
-  mq.innerHTML = items;
+  mq.innerHTML = [...MARQUEE, ...MARQUEE].map((t) => `<span>${t}</span>`).join("");
 
   /* ----- Theme toggle (persisted) ----- */
   const root = document.documentElement;
@@ -329,8 +328,7 @@ const MARQUEE = [
     function tick(now) {
       const t = Math.min(1, (now - start) / dur);
       const eased = 1 - Math.pow(1 - t, 3);
-      const val = Math.round(target * eased);
-      n.textContent = val.toLocaleString("en-US") + suffix;
+      n.textContent = Math.round(target * eased).toLocaleString("en-US") + suffix;
       if (t < 1) requestAnimationFrame(tick);
     }
     requestAnimationFrame(tick);

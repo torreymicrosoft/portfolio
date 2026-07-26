@@ -1,4 +1,4 @@
-# DEPLOY.md — Ship V1 to Azure Static Web Apps (Free)
+# DEPLOY.md - Ship V1 to Azure Static Web Apps (Free)
 
 Two paths: **Portal** (easiest) or **Azure CLI** (scriptable). Both give you a free
 `*.azurestaticapps.net` URL with HTTPS, and auto-redeploy on `git push`.
@@ -12,7 +12,7 @@ Two paths: **Portal** (easiest) or **Azure CLI** (scriptable). Both give you a f
 
 ---
 
-## Option A — Azure Portal (5 minutes)
+## Option A - Azure Portal (5 minutes)
 1. Push this folder to a GitHub repo.
 2. Portal → **Create a resource → Static Web App**.
 3. Plan type: **Free**.
@@ -29,7 +29,7 @@ Two paths: **Portal** (easiest) or **Azure CLI** (scriptable). Both give you a f
 
 ---
 
-## Option B — Azure CLI
+## Option B - Azure CLI
 
 ```bash
 # 0) Login
