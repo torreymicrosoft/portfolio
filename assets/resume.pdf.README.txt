@@ -1,0 +1,6 @@
+Drop your resume here as `resume.pdf` (this exact filename).
+
+The "Resume" button in the site nav links to `assets/resume.pdf`.
+Once you add the file and push, the download works automatically.
+
+Tip: keep the PDF under ~2 MB for fast loads.
