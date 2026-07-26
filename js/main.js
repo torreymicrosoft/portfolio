@@ -11,7 +11,7 @@ const PROJECTS = [
     title: "AI Career Advisor",
     year: "2025",
     category: "AI & ML",
-    desc: "UC Berkeley MIDS capstone: a generative-AI advisor that guides users through career decisions using LLMs and retrieval over real job data.",
+    desc: "My UC Berkeley MIDS final capstone (Spring 2025) — a generative-AI \"AI Career Advisor,\" the culminating project across my applied-ML, NLP, and data-engineering coursework.",
     tags: ["Gen-AI", "NLP", "Python", "Capstone"],
     links: [],
   },
@@ -20,14 +20,14 @@ const PROJECTS = [
     title: "AVM + Copilot (Agent Mode)",
     year: "2026",
     category: "AI & ML",
-    desc: "AI-assisted infrastructure-as-code — authoring secure, well-architected Azure Verified Modules with a live GitHub Copilot agent-mode workflow, demoed to a 3,500+ developer audience.",
+    desc: "AI-assisted infrastructure-as-code — authoring secure, well-architected Azure Verified Modules with a live GitHub Copilot agent-mode workflow. Presented at Azure Infra Summit 2026.",
     tags: ["LLM", "Copilot", "Bicep", "AVM"],
     links: [{ label: "Azure Verified Modules", href: "https://azure.github.io/Azure-Verified-Modules/" }],
   },
   {
     icon: "🧬",
     title: "GAN Research — Microsoft Boston",
-    year: "2020",
+    year: "2019–20",
     category: "AI & ML",
     desc: "A 10-week applied-ML project with Microsoft Boston PhD researchers building and studying Generative Adversarial Networks (GANs).",
     tags: ["GANs", "Deep Learning", "Research"],
@@ -45,7 +45,7 @@ const PROJECTS = [
   {
     icon: "🛡️",
     title: "Azure Light Edge — Secure Edge OS",
-    year: "2022",
+    year: "2020–24",
     category: "Edge & Hardware",
     desc: "Operating systems, device imaging, Kubernetes, and Secure Core security certifications for Linux/Windows on constrained edge hardware.",
     tags: ["Kubernetes", "Linux", "Secure Core", "Edge"],
@@ -54,7 +54,7 @@ const PROJECTS = [
   {
     icon: "🛠️",
     title: "IoT Config Tool V2",
-    year: "2022",
+    year: "2020–24",
     category: "Edge & Hardware",
     desc: "Second-generation configuration and provisioning experience for edge devices — owned PRDs, GTM, telemetry, and partner/ecosystem research end to end.",
     tags: ["Edge", "Provisioning", "Telemetry"],
@@ -72,7 +72,7 @@ const PROJECTS = [
   {
     icon: "☁️",
     title: "Azure Arc — Adaptive Cloud",
-    year: "2023",
+    year: "2020–24",
     category: "Cloud & DevOps",
     desc: "Edge-focused security and CI/CD experiences across Adaptive Cloud (Arc) — full lifecycle from PRD through funding, POC, and MVP for 50+ enterprise customers.",
     tags: ["Azure Arc", "CI/CD", "Security", "Hybrid"],
@@ -140,13 +140,13 @@ const SPEAKING = [
   {
     ico: "🎤",
     title: "PowerShell + DevOps Global Summit 2026",
-    desc: "The Bicep team ran four sessions — the local-deploy Bicep extension, learning Bicep with AI, deployment stacks, and the state of IaC on Azure — including my live Copilot agent-mode demo to a 3,500+ developer audience.",
+    desc: "The Bicep team ran four on-demand sessions — the local-deploy Bicep extension, learning Bicep with AI, deployment stacks, and the state of IaC on Azure.",
     cta: { label: "About the summit", href: "https://powershelldevopsglobalsummit.org/" },
   },
   {
     ico: "🗣️",
     title: "Azure Infra Summit 2026",
-    desc: "Five on-demand Bicep sessions covering power-user patterns, deployment stacks, AVM + Copilot, IaC CI/CD, and the ALZ accelerator.",
+    desc: "Five on-demand Bicep sessions — power-user patterns, deployment stacks, AVM + Copilot, IaC CI/CD, the ALZ accelerator, and a live Copilot agent-mode demo.",
     cta: { label: "Bicep: Beyond the Basics", href: "https://www.youtube.com/watch?v=y7G7aXwe6QY" },
   },
   {
