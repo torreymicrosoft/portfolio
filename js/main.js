@@ -24,7 +24,7 @@ const PROJECTS = [
     desc: "AI-assisted infrastructure-as-code: authoring secure, well-architected Azure Verified Modules with a live GitHub Copilot agent-mode workflow. Presented at Azure Infra Summit 2026.",
     tags: ["LLM", "Copilot", "Bicep", "AVM"],
     details: "Core to my current Bicep PM work: secure-by-default modules with AI assistance, featured across Azure Infra Summit 2026 sessions.",
-    links: [],
+    links: [{ label: "Bicep: Beyond the Basics", href: "https://www.youtube.com/watch?v=y7G7aXwe6QY" }],
   },
   {
     icon: "🧬",
@@ -95,6 +95,7 @@ const EXPERIENCE = [
     org: "Microsoft · Azure Core",
     date: "Mar 2026 to Present",
     dur: "5 mos",
+    now: true,
     desc: "Drive Bicep and Azure deployment experiences: deployment stacks, AVM + Copilot, IaC CI/CD, and the ALZ accelerator. Evangelize IaC at Azure Infra Summit 2026 and the PowerShell + DevOps Global Summit, including a live Copilot agent-mode demo to a 3,500+ developer audience.",
   },
   {
@@ -102,7 +103,7 @@ const EXPERIENCE = [
     org: "Microsoft · Xbox",
     date: "Aug 2024 to Apr 2026",
     dur: "1 yr 9 mos",
-    desc: "Xbox Accessories: shipped 15+ customization programs on time and on budget with cost reductions, driving manufacturing, milestone, and reliability improvements across 10+ cross-functional teams.",
+    desc: "Xbox Accessories: shipped 15+ customization programs on time and on budget with cost reductions, driving manufacturing, milestone, and reliability improvements. Chosen to lead an executive-sponsored program spanning 10+ cross-functional teams.",
   },
   {
     role: "Product Manager 2 & TPM 2, Azure (Arc and Edge)",
@@ -116,7 +117,7 @@ const EXPERIENCE = [
     org: "Microsoft",
     date: "Oct 2018 to Mar 2020",
     dur: "1 yr 6 mos",
-    desc: "Hosted 7+ workshops (50+ attendees each) at CMU, Pitt, and Chatham, and ran a 10-week GAN research project with Microsoft Boston PhD researchers.",
+    desc: "Hosted 7+ workshops (50+ attendees each) at CMU, Pitt, and Chatham, and ran a 10-week GAN research project with Microsoft Boston PhD researchers. Selected as 1 of 9 of 200+ US Microsoft Student Partners invited to a Microsoft Ignite summit.",
   },
   {
     role: "PM & Innovation Internships",
@@ -318,10 +319,11 @@ const CAT_ACCENT = {
   /* ----- Timeline ----- */
   const tl = $("#timeline");
   EXPERIENCE.forEach((e) => {
-    const li = el("li", "reveal" + (e.edu ? " edu" : ""));
+    const li = el("li", "reveal" + (e.edu ? " edu" : "") + (e.now ? " now" : ""));
     const dur = e.dur ? ` <span class="sep">·</span> <b>${esc(e.dur)}</b>` : "";
+    const badge = e.now ? ` <span class="t-now">Current</span>` : "";
     li.innerHTML = `
-      <div class="t-role">${esc(e.role)}</div>
+      <div class="t-role">${esc(e.role)}${badge}</div>
       <span class="t-date"><span class="t-org">${esc(e.org)}</span>, ${esc(e.date)}${dur}</span>
       <p class="t-desc">${esc(e.desc)}</p>`;
     tl.appendChild(li);
@@ -367,12 +369,17 @@ const CAT_ACCENT = {
   /* ----- Theme toggle (persisted) ----- */
   const root = document.documentElement;
   const toggle = $("#themeToggle");
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+  const THEME_COLORS = { dark: "#0a0e16", light: "#f6f8fc" };
+  const syncThemeColor = (t) => { if (themeMeta) themeMeta.setAttribute("content", THEME_COLORS[t] || THEME_COLORS.dark); };
   const saved = localStorage.getItem("theme");
   if (saved) root.setAttribute("data-theme", saved);
+  syncThemeColor(root.getAttribute("data-theme"));
   toggle.addEventListener("click", () => {
     const next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
     root.setAttribute("data-theme", next);
     localStorage.setItem("theme", next);
+    syncThemeColor(next);
   });
 
   /* ----- Mobile nav ----- */
@@ -435,15 +442,17 @@ const CAT_ACCENT = {
     requestAnimationFrame(tick);
   }
   const statEls = document.querySelectorAll("#stats strong[data-count]");
-  if ("IntersectionObserver" in window) {
+  const prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const setStatFinal = (s) => { s.textContent = (+s.dataset.count).toLocaleString("en-US") + (s.dataset.suffix || ""); };
+  if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+    statEls.forEach(setStatFinal);
+  } else {
     const so = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
         if (e.isIntersecting) { animateStat(e.target); so.unobserve(e.target); }
       });
     }, { threshold: 0.6 });
     statEls.forEach((s) => so.observe(s));
-  } else {
-    statEls.forEach((s) => { s.textContent = (+s.dataset.count).toLocaleString("en-US") + (s.dataset.suffix || ""); });
   }
 
   /* ----- Reveal on scroll ----- */
