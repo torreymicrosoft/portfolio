@@ -90,11 +90,62 @@ const PROJECTS = [
     icon: "🌴",
     title: "PTO Runway",
     year: "2026",
-    category: "Cloud & DevOps",
+    category: "Side Projects",
     desc: "A personal project that projects your time-off balance month by month and finds high-leverage getaways by bridging holidays and weekends. Hosted on Azure and shipped end to end.",
     tags: ["Azure", "Deployment Stacks", "Static Web Apps", "Side Project"],
     details: "Built solo as a learning project: policy presets for 35+ employers, an unlimited-PTO recommender, calendar export, and a time-off value estimator. Versioned with git and managed through Azure Deployment Stacks.",
     links: [{ label: "Try PTO Runway", href: "https://tinyurl.com/pto-runway" }],
+  },
+  {
+    icon: "🧭",
+    title: "Career Coach",
+    year: "2026",
+    category: "Side Projects",
+    desc: "A free, fully in-browser career toolkit: resume optimizer, interview practice, and referral helper. Everything runs client-side, so nothing you type ever leaves your device.",
+    tags: ["In-Browser", "Privacy-First", "Web App", "Side Project"],
+    details: "A privacy-by-design product built as a learning project, with no accounts and no servers, hosted on Azure Static Web Apps.",
+    links: [{ label: "Try Career Coach", href: "https://purple-island-0fc9c8b10.7.azurestaticapps.net/" }],
+  },
+  {
+    icon: "🔥",
+    title: "EmberFI",
+    year: "2026",
+    category: "Side Projects",
+    desc: "A financial-independence calculator with Standard, Barista, and Expat FIRE modes, plus a Boglehead index-investing view. Built with React and Vite.",
+    tags: ["React", "Vite", "FIRE", "Side Project"],
+    details: "A side project exploring different paths to financial independence, with clean scenario modeling and a fast, no-login interface on Azure.",
+    links: [{ label: "Try EmberFI", href: "https://icy-mud-03eee400f.7.azurestaticapps.net/" }],
+  },
+  {
+    icon: "📊",
+    title: "Wealth Runway",
+    year: "2026",
+    category: "Side Projects",
+    desc: "A personal net-worth tracker and compensation modeler that projects your financial runway toward retirement. React and Recharts, with all data kept locally in your browser.",
+    tags: ["React", "Recharts", "Personal Finance", "Side Project"],
+    details: "Built to visualize savings, compensation, and long-term runway in one place, with local-only storage, hosted on Azure Static Web Apps.",
+    links: [{ label: "Try Wealth Runway", href: "https://victorious-field-0ffd94b0f.7.azurestaticapps.net/" }],
+  },
+  {
+    icon: "🛰️",
+    title: "Task Orbit",
+    year: "2026",
+    category: "Side Projects",
+    desc: "A fast, keyboard-friendly task manager that organizes work into focused orbits, so the next thing to do is always clear.",
+    tags: ["Productivity", "Tasks", "Web App", "Side Project"],
+    details: "My most actively iterated side project: a lightweight personal task system, shipped and hosted on Azure.",
+    links: [{ label: "Try Task Orbit", href: "https://gray-tree-021a9a70f.7.azurestaticapps.net/" }],
+  },
+  {
+    icon: "🫀",
+    title: "Longevity Maxer",
+    year: "2026",
+    category: "Side Projects",
+    desc: "An in-progress tool focused on longevity and healthspan, turning daily habits and metrics into a clear, actionable plan.",
+    tags: ["Longevity", "Healthspan", "Side Project"],
+    details: "Currently building this out. It will be hosted on Azure alongside my other side projects.",
+    links: [],
+    status: "Coming soon",
   },
 ];
 
@@ -237,6 +288,7 @@ const CAT_ACCENT = {
   "AI & ML": "#a06bff",
   "Edge & Hardware": "#34e0c4",
   "Cloud & DevOps": "#6ea8fe",
+  "Side Projects": "#f6a94b",
 };
 
 /* ============================================================
@@ -330,7 +382,7 @@ const CAT_ACCENT = {
         <p>${esc(p.desc)}</p>
         <div class="project__tags">${p.tags.map((t) => `<span>${esc(t)}</span>`).join("")}</div>
         ${more}
-        ${links ? `<div class="project__links">${links}</div>` : ""}`;
+        ${links ? `<div class="project__links">${links}</div>` : p.status ? `<div class="project__links"><span class="project__soon">${esc(p.status)}</span></div>` : ""}`;
       const toggle = card.querySelector(".project__toggle");
       if (toggle) {
         toggle.addEventListener("click", () => {

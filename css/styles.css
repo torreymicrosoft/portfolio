@@ -196,6 +196,12 @@ strong { color: var(--text); font-weight: 600; }
 .project__tags span { font-family: var(--mono); font-size: .7rem; padding: 3px 8px; border-radius: 5px; background: var(--surface-2); color: var(--muted); }
 .project__links { display: flex; gap: 14px; margin-top: 2px; }
 .project__links a { font-size: .86rem; font-weight: 600; display: inline-flex; align-items: center; gap: 5px; }
+.project__soon {
+  font-family: var(--mono); font-size: .72rem; font-weight: 600; letter-spacing: .04em;
+  color: var(--card-accent, var(--accent));
+  border: 1px dashed var(--card-accent, var(--accent));
+  border-radius: 999px; padding: 3px 10px; opacity: .85;
+}
 
 /* ---------------- Timeline ---------------- */
 .timeline { list-style: none; margin: 0; padding: 0; position: relative; }
