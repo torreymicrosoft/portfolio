@@ -7,6 +7,16 @@
 /* ---------- EDIT ME: PROJECTS ---------- */
 const PROJECTS = [
   {
+    icon: "✨",
+    title: "This Portfolio, Vibe-Coded with AI",
+    year: "2026",
+    category: "AI & ML",
+    desc: "This very site was vibe-coded with GitHub Copilot in agent mode: a dependency-free static site, prompt-driven from layout to content, versioned with git and auto-deployed to Azure on every push.",
+    tags: ["GitHub Copilot", "Agent Mode", "Vibe Coding", "Azure SWA"],
+    details: "A meta showcase of AI-assisted building: I directed a GitHub Copilot agent to design, write, and iterate the HTML, CSS, and JavaScript, then shipped it through Azure Static Web Apps CI/CD. It is the same AI-native workflow I bring to infrastructure-as-code, applied to my own portfolio.",
+    links: [{ label: "Built with GitHub Copilot", href: "https://github.com/features/copilot" }],
+  },
+  {
     icon: "🎓",
     title: "AI Career Advisor",
     year: "2025",
