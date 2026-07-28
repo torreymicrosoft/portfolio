@@ -167,6 +167,11 @@ strong { color: var(--text); font-weight: 600; }
 .about__meta h4 { margin: 0 0 10px; font-size: .82rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
 .chips { display: flex; flex-wrap: wrap; gap: 7px; }
 .chips span { font-size: .8rem; padding: 5px 11px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--text); }
+.chips a { font-size: .8rem; padding: 5px 11px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--brand); text-decoration: none; transition: .2s; }
+.chips a:hover { border-color: var(--brand); color: var(--brand-2); }
+.muted a { color: var(--brand); text-decoration: underline; text-underline-offset: 2px; }
+.muted a:hover { color: var(--brand-2); }
+.muted a strong { color: inherit; }
 .about__card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
 .about__card h3 { margin: 0 0 16px; font-size: 1.15rem; }
 .about__stack-h { margin: 22px 0 12px; font-size: .82rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
