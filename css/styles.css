@@ -302,3 +302,12 @@ strong { color: var(--text); font-weight: 600; }
   .project, .card, .about__card, .timeline li { break-inside: avoid; page-break-inside: avoid; border-color: #ccc; }
   .section--alt, .highlights, .marquee { background: #fff; }
 }
+
+/* ---------------- Recommendations ---------------- */
+.quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
+.quote { margin: 0; position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 30px 28px 26px; box-shadow: var(--shadow-sm); }
+.quote::before { content: "\201C"; position: absolute; top: 8px; left: 20px; font-family: var(--display); font-size: 3rem; line-height: 1; color: color-mix(in srgb, var(--brand) 45%, transparent); }
+.quote blockquote { margin: 20px 0 16px; color: var(--muted); font-size: .97rem; line-height: 1.62; }
+.quote figcaption { display: flex; flex-direction: column; gap: 2px; border-top: 1px solid var(--border); padding-top: 14px; }
+.quote__name { font-family: var(--display); font-weight: 700; color: var(--text); font-size: .95rem; }
+.quote__role { font-family: var(--mono); font-size: .74rem; color: var(--muted); }

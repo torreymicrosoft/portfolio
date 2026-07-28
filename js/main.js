@@ -43,7 +43,7 @@ const PROJECTS = [
     category: "Edge & Hardware",
     desc: "Deployable Edge-AI developer kit with vision and audio, paired with Azure Percept Studio. Drove it from concept (P0) to GA, announced at Microsoft Ignite.",
     tags: ["Edge AI", "Computer Vision", "Azure IoT", "Hardware"],
-    details: "Launch-team PM across EV, DV, PV, MP, and NPI, with 17+ localizations reaching 25+ countries.",
+    details: "Launch-team PM across EV, DV, PV, MP, and NPI, with 17+ localizations reaching 25+ countries. Owned an ASUS firmware release end to end, and led the full product lifecycle through end-of-life as subject-matter expert.",
     links: [],
   },
   {
@@ -83,7 +83,7 @@ const PROJECTS = [
     category: "Cloud & DevOps",
     desc: "Edge-focused security and CI/CD experiences across Adaptive Cloud (Arc). Full lifecycle from PRD through funding, POC, and MVP for 50+ enterprise customers.",
     tags: ["Azure Arc", "CI/CD", "Security", "Hybrid"],
-    details: "Lead PM from PRD through funding, POC, and MVP, with UX research across 50+ enterprise customers.",
+    details: "Lead PM from PRD through funding, POC, and MVP, and drove the end-to-end launch of Azure Arc Site Manager across go-to-market, compliance, and privacy, with UX research across 50+ enterprise customers.",
     links: [],
   },
 ];
@@ -127,10 +127,17 @@ const EXPERIENCE = [
     desc: "Citi Hong Kong TTS summer analyst (sole non-MBA extended a return offer); Google Student Innovator for GCP and G-Suite; Ingram Micro innovation intern who launched a reverse-mentoring program for 20+ senior IT leaders.",
   },
   {
+    role: "Co-founder",
+    org: "Rollin, fintech side project",
+    date: "2018 to 2021",
+    dur: "$20k+ raised",
+    desc: "Built a fintech side project alongside school and internships; won 4 pitch competitions and 2 incubators.",
+  },
+  {
     role: "M.S., Information & Data Science (MIDS)",
     org: "UC Berkeley",
     date: "Aug 2021 to Apr 2025",
-    dur: "",
+    dur: "GPA 3.83",
     edu: true,
     desc: "Graduate study in applied AI and ML: Applied Machine Learning, ML at Scale, NLP, Gen-AI, and Data Engineering. Capstone: AI Career Advisor.",
   },
@@ -138,7 +145,7 @@ const EXPERIENCE = [
     role: "B.S.B.A., Supply Chain Management",
     org: "University of Pittsburgh",
     date: "Aug 2017 to Apr 2020",
-    dur: "Dean's List",
+    dur: "GPA 3.7 · Dean's List",
     edu: true,
     desc: "Graduated a year early with partial studies in computer and information science; founded the Google Developer Student Club at Pitt.",
   },
@@ -163,6 +170,15 @@ const SPEAKING = [
     title: "Bicep Community & Content",
     desc: "Ongoing Bicep updates, demos, and developer evangelism, teaching infrastructure-as-code, governance, and AI-assisted workflows.",
     cta: { label: "Azure Bicep on GitHub", href: "https://github.com/Azure/bicep" },
+  },
+];
+
+/* ---------- EDIT ME: RECOMMENDATIONS ---------- */
+const TESTIMONIALS = [
+  {
+    quote: "Torrey demonstrated outstanding proficiency in data science and natural language processing... his solid background and rapid comprehension of new concepts were consistently apparent, and his problem-solving skills underscored his expertise. Beyond the technical, his multilingual proficiency and sense of humor make him a valuable team player.",
+    name: "Shuo (Alex) Wang, P.E., CFM",
+    role: "UC Berkeley MIDS classmate, NLP with Deep Learning",
   },
 ];
 
@@ -340,6 +356,18 @@ const CAT_ACCENT = {
       <a href="${s.cta.href}" target="_blank" rel="noopener">${esc(s.cta.label)} →</a>`;
     sg.appendChild(c);
   });
+
+  /* ----- Recommendations ----- */
+  const qg = $("#quotes");
+  if (qg) {
+    TESTIMONIALS.forEach((t) => {
+      const fig = el("figure", "quote reveal");
+      fig.innerHTML = `
+        <blockquote>${esc(t.quote)}</blockquote>
+        <figcaption><span class="quote__name">${esc(t.name)}</span><span class="quote__role">${esc(t.role)}</span></figcaption>`;
+      qg.appendChild(fig);
+    });
+  }
 
   /* ----- Contact (SVG icons + copy email) ----- */
   const cl = $("#contact-links");
