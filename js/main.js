@@ -200,6 +200,14 @@ const CONTACT = [
   { label: "Resume", href: "assets/resume.pdf" },
 ];
 
+/* ---------- EDIT ME: MEDIA ----------
+   Drop image files into assets/ to populate these. Each is optional and
+   self-hides if the file is missing, so the site looks intact without them.
+     assets/profile.jpg  ->  hero avatar portrait (falls back to "TT")
+     assets/banner.jpg   ->  subtle hero background
+   Per-role logos: add  logo: "assets/your-logo.png"  to any EXPERIENCE entry. */
+const MEDIA = { profile: "assets/profile.jpg", banner: "assets/banner.jpg" };
+
 /* ---------- EDIT ME: HIGHLIGHTS ---------- */
 const HIGHLIGHTS = [
   { ico: "🚀", text: "Shipped Azure Percept to GA (Ignite)" },
@@ -243,6 +251,31 @@ const CAT_ACCENT = {
     return n;
   };
   const esc = (s) => String(s).replace(/[&<>"]/g, (m) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[m]));
+
+  /* ----- Optional media: load only if the asset exists (no broken images) ----- */
+  const loadImg = (src) =>
+    new Promise((res) => {
+      if (!src) return res(null);
+      const im = new Image();
+      im.onload = () => res(im);
+      im.onerror = () => res(null);
+      im.src = src;
+    });
+  loadImg(MEDIA.profile).then((im) => {
+    const a = $(".avatar");
+    if (!im || !a) return;
+    const g = el("img", "avatar__img");
+    g.src = MEDIA.profile;
+    g.alt = "Torrey Trahanovsky";
+    a.classList.add("avatar--photo");
+    a.appendChild(g);
+  });
+  loadImg(MEDIA.banner).then((im) => {
+    const h = $(".hero");
+    if (!im || !h) return;
+    h.style.setProperty("--hero-banner", `url("${MEDIA.banner}")`);
+    h.classList.add("hero--banner");
+  });
 
   /* ----- Toast ----- */
   const toast = el("div", "toast", "");
@@ -352,6 +385,16 @@ const CAT_ACCENT = {
       <div class="t-role">${esc(e.role)}${badge}</div>
       <span class="t-date"><span class="t-org">${esc(e.org)}</span>, ${esc(e.date)}${dur}</span>
       <p class="t-desc">${esc(e.desc)}</p>`;
+    if (e.logo) {
+      loadImg(e.logo).then((im) => {
+        const roleEl = li.querySelector(".t-role");
+        if (!im || !roleEl) return;
+        const g = el("img", "t-logo");
+        g.src = e.logo;
+        g.alt = "";
+        roleEl.insertBefore(g, roleEl.firstChild);
+      });
+    }
     tl.appendChild(li);
   });
 
