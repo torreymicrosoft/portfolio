@@ -33,8 +33,8 @@ const PROJECTS = [
     category: "AI & ML",
     desc: "A 10-week applied-ML project with Microsoft Boston PhD researchers, building and studying Generative Adversarial Networks (GANs) during my time as a Microsoft Student Partner.",
     tags: ["GANs", "Deep Learning", "Research"],
-    details: "Ran through the Advanced Machine Learning Lab, pairing with PhD researchers to build and study GANs.",
-    links: [],
+    details: "Ran through the Advanced Machine Learning Lab, pairing with PhD researchers to build and study GANs. Co-authored a published explainer in Microsoft's Azure engineering publication.",
+    links: [{ label: "Read: GANs on Microsoft Medium", href: "https://medium.com/microsoft/generative-adversarial-networks-gans-b92af4bf481d" }],
   },
   {
     icon: "🧠",
@@ -85,6 +85,16 @@ const PROJECTS = [
     tags: ["Azure Arc", "CI/CD", "Security", "Hybrid"],
     details: "Lead PM from PRD through funding, POC, and MVP, and drove the end-to-end launch of Azure Arc Site Manager across go-to-market, compliance, and privacy, with UX research across 50+ enterprise customers.",
     links: [],
+  },
+  {
+    icon: "🌴",
+    title: "PTO Runway",
+    year: "2026",
+    category: "Cloud & DevOps",
+    desc: "A personal project that projects your time-off balance month by month and finds high-leverage getaways by bridging holidays and weekends. Hosted on Azure and shipped end to end.",
+    tags: ["Azure", "Deployment Stacks", "Static Web Apps", "Side Project"],
+    details: "Built solo as a learning project: policy presets for 35+ employers, an unlimited-PTO recommender, calendar export, and a time-off value estimator. Versioned with git and managed through Azure Deployment Stacks.",
+    links: [{ label: "Try PTO Runway", href: "https://tinyurl.com/pto-runway" }],
   },
 ];
 
